@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -6,11 +6,49 @@
   <title>Rakibul's Personal Site.</title>
 </head>
 
-<body>
-  <table cellspacing="20">
+<body style="background-color: #EAF6F6">
+<style>
+	td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+	</style>
+  <table cellspacing="20" align="center">
     <tr>
       <td><img src="images\rakibul.jpg" alt="Rakibul profile pictire"></td>
-      <td>
+      <td style=" ">
         <h1>Rakibul Islam</h1>
         <p><em>Student Of <strong><a href="http://uem.edu.in/uem-jaipur/">University Of Engineering & Management(UEM)</a></strong>.</em></p>
         <p>I am expert in <strong>Python</strong> and very good in <strong>C,C++,Java & Javascript</strong>. </p>
@@ -85,16 +123,15 @@
     <td>Gmail-raki82932@gmail.com</td>
   </tr>
 </table>
+<br> 
 <br>
-<br>
-<form class="" action="gmailto:raki82932@gmail.com" method="post" encodingtype="utf-8">
-  <label>Your name:</label>
-  <input type="text name="YourName" value=""><br>
-  <label>Your gmail</label>
-  <input type="gmail" name="YourGmail" value=""><br>
-  <label>Your massage</label><br>
-  <textarea name="" cols="30" rows="10"></textarea><br>
-  <input type="submit" name="" >
-</form>
+  <form method="post" action="sendmail.php">
+        To : <input type="text" name="mail_to"> <br/>
+        Subject :   <input type="text" name="mail_sub">
+       <br/>
+         Message   <input type="text" name="mail_msg">
+        <br/>
+            <input type="submit" value="Send Email">
+        </form>
 
 </html>
