@@ -16,6 +16,8 @@ try {
     $mail_to=$_POST['mail_to'];
     $mail_sub=$_POST['mail_sub'];
     $mail_msg=$_POST['mail_msg'];
+	
+	echo $mail_to; die;
     
     $message = '';
 	$message .= 'Email Id : '. $mail_to."<br>";
